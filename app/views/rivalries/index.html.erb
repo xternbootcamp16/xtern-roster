@@ -13,7 +13,7 @@
   <tbody>
     <% @rivalries.each do |rivalry| %>
       <tr>
-        <td><%= rivalry.person %></td>
+        <td><%= "#{rivalry.person.name} vs #{rivalry.rival.name}" %></td>
         <td><%= link_to 'Show', rivalry %></td>
         <td><%= link_to 'Edit', edit_rivalry_path(rivalry) %></td>
         <td><%= link_to 'Destroy', rivalry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
