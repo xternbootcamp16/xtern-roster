@@ -69,6 +69,6 @@ class RivalriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rivalry_params
-      params.require(:rivalry).permit(:person_id)
+      params.require(:rivalry).permit(:person_id, :rival_id)
     end
 end

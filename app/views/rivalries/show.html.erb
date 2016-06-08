@@ -2,7 +2,12 @@
 
 <p>
   <strong>Person:</strong>
-  <%= @rivalry.person %>
+  <%= link_to @rivalry.person.name, @rivalry.person %>
+</p>
+
+<p>
+  <strong>Rival:</strong>
+  <%= link_to @rivalry.rival.name, @rivalry.rival %>
 </p>
 
 <%= link_to 'Edit', edit_rivalry_path(@rivalry) %> |
