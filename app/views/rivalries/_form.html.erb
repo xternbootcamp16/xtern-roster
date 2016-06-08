@@ -1,0 +1,21 @@
+<%= form_for(@rivalry) do |f| %>
+  <% if @rivalry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rivalry.errors.count, "error") %> prohibited this rivalry from being saved:</h2>
+
+      <ul>
+      <% @rivalry.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :person_id %><br>
+    <%= f.text_field :person_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
