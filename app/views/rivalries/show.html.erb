@@ -7,7 +7,11 @@
 
 <p>
   <strong>Rival:</strong>
-  <%= link_to @rivalry.rival.name, @rivalry.rival %>
+  <% if @rivalry.rival.present? %>
+    <%= link_to @rivalry.rival.name, @rivalry.rival %>
+  <% else %>
+    <%= link_to @rivalry.pokemon_url %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_rivalry_path(@rivalry) %> |

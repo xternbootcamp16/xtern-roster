@@ -17,7 +17,11 @@
   </div>
   <div class="field">
     <%= f.label :rival_id %><br>
-    <%= f.collection_select :rival_id, Person.all, :id, :name %>
+    <%= f.collection_select :rival_id, Person.all, :id, :name, include_blank: 'Select a human rival' %>
+  </div>
+  <div class="field">
+    <%= f.label :pokemon_url %><br>
+    <%= f.text_field :pokemon_url %>
   </div>
   <div class="actions">
     <%= f.submit %>
